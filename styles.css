@@ -1,44 +1,62 @@
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f9fa;
+    color: #222;
 }
 header {
-    background-color: #0088cc;
-    color: white;
-    text-align: center;
-    padding: 3rem 1rem;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
 }
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+.logo {
+    font-size: 1.5rem;
 }
-header p {
-    font-size: 1.2rem;
+.contacts {
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
 }
-.cta {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    background: white;
-    color: #0088cc;
-    border-radius: 4px;
+.contacts a {
+    color: #0077cc;
     text-decoration: none;
-    font-weight: bold;
 }
-main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-}
-section {
-    margin-bottom: 2rem;
-}
-footer {
+.typing-block {
+    padding: 3rem 2rem;
     text-align: center;
-    font-size: 0.9rem;
-    padding: 1rem;
-    background: #eee;
+    background: #e6f2ff;
+}
+.label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.typing-container {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: monospace;
+}
+.about-demo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+}
+.about {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 2rem;
+}
+.video {
+    flex: 1;
+    min-width: 250px;
+}
+.phone-frame {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 30px;
+    padding: 2rem;
+    text-align: center;
+    font-style: italic;
 }
