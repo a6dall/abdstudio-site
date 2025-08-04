@@ -5,33 +5,33 @@
     <meta charset="UTF-8">
     <title>ABDStudio — Telegram-боты под ключ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">🤖 <strong>ABDStudio</strong></div>
-        <div class="contacts">TG: <a href="https://t.me/abd_creator">@abd_creator</a></div>
+        <div class="container header-inner">
+            <div class="logo">🤖 <strong>ABDStudio</strong></div>
+            <div class="contacts">TG: <a href="https://t.me/abd_creator">@abd_creator</a></div>
+        </div>
     </header>
 
-    <section class="typing-block">
-        <div class="label">ABD =</div>
-        <div class="typing-container">
-            <span class="static-text">Advanced Bot Development → </span>
-            <span class="typing-text" id="typing"></span>
-        </div>
-    </section>
+    <main class="container">
+        <section class="typing-section">
+            <div class="typing-label">ABD = <span id="typing"></span><span class="cursor">|</span></div>
+        </section>
 
-    <section class="about-demo">
-        <div class="about">
-            <p>
-                Мы — команда ABDStudio, создающая Telegram-ботов под ключ. Мы делаем автоматизацию, MVP, магазины, админки и любые интеграции.
-                Всё — под твои задачи, быстро и красиво.
-            </p>
-        </div>
-        <div class="video">
-            <div class="phone-frame">Здесь будет видео с ботом</div>
-        </div>
-    </section>
+        <section class="about-video">
+            <div class="about-card">
+                <h2>О студии</h2>
+                <p>Мы — студия Telegram-ботов под ключ. Делаем MVP, магазины, интеграции и автоматизацию. Продукт под тебя, быстро и стабильно.</p>
+                <a class="cta" href="https://t.me/abd_creator">Связаться в Telegram</a>
+            </div>
+            <div class="video-mockup">
+                <div class="phone-frame">Здесь будет видео бота</div>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

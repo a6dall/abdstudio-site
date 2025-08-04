@@ -1,19 +1,29 @@
 
-const text = "Automate. Build. Deploy. → ...";
-let index = 0;
 const typingElement = document.getElementById("typing");
+const texts = ["Advanced Bot Development", "Automate. Build. Deploy."];
+let textIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
 function type() {
-    if (index < text.length) {
-        typingElement.textContent += text.charAt(index);
-        index++;
-        setTimeout(type, 100);
+    const currentText = texts[textIndex];
+    if (!deleting) {
+        typingElement.textContent += currentText.charAt(charIndex);
+        charIndex++;
+        if (charIndex === currentText.length) {
+            deleting = true;
+            setTimeout(type, 1500); // pause before delete
+            return;
+        }
     } else {
-        setTimeout(() => {
-            typingElement.textContent = "";
-            index = 0;
-            type();
-        }, 1500);
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+            deleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+        }
     }
+    setTimeout(type, deleting ? 50 : 100);
 }
+
 type();

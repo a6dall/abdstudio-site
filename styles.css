@@ -1,62 +1,94 @@
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f8f9fa;
-    color: #222;
+    font-family: 'Inter', sans-serif;
+    background-color: #0f0f0f;
+    color: #f0f0f0;
 }
-header {
-    background: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #ddd;
-}
-.logo {
-    font-size: 1.5rem;
-}
-.contacts {
-    font-size: 0.95rem;
-    margin-top: 0.4rem;
-}
-.contacts a {
-    color: #0077cc;
+
+a {
+    color: #55aaff;
     text-decoration: none;
 }
-.typing-block {
-    padding: 3rem 2rem;
-    text-align: center;
-    background: #e6f2ff;
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
 }
-.label {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+
+header {
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
 }
-.typing-container {
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
     font-size: 1.5rem;
-    font-weight: bold;
-    font-family: monospace;
+    font-weight: 600;
 }
-.about-demo {
+
+.typing-section {
+    padding: 4rem 0 2rem 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.cursor {
+    display: inline-block;
+    width: 1ch;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.about-video {
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
     justify-content: space-between;
-    padding: 3rem 2rem;
+    align-items: flex-start;
+    margin-top: 3rem;
 }
-.about {
+
+.about-card {
     flex: 1;
-    min-width: 250px;
-    margin-right: 2rem;
+    background: #1c1c1c;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    min-width: 280px;
 }
-.video {
+
+.cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #55aaff;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.video-mockup {
     flex: 1;
-    min-width: 250px;
+    min-width: 280px;
 }
+
 .phone-frame {
-    background: #fff;
-    border: 2px solid #000;
+    background: #111;
+    border: 2px solid #333;
     border-radius: 30px;
     padding: 2rem;
     text-align: center;
+    color: #888;
     font-style: italic;
 }
