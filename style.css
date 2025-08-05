@@ -486,7 +486,7 @@ header.navbar {
 /* ==== Форма заявки ==== */
 #contact-form {
   padding: 60px 20px;
-  background-color: #0f1117; /* такой же фон, как у процесса разработки */
+  background-color: #1a1c22; /* темный фон для формы */
 }
 
 .contact-form {
@@ -495,27 +495,34 @@ header.navbar {
   gap: 20px;
   max-width: 600px;
   margin: 0 auto;
-  background: #16181d; /* более темный фон для контента формы */
-  padding: 30px;
+  background: #21252b; /* темный фон формы */
+  padding: 40px;
   border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form label {
-  color: #ccc;
+  color: #bbb; /* более мягкий цвет для текста меток */
   font-size: 16px;
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-  padding: 12px;
+  padding: 14px;
   border-radius: 8px;
-  border: 1px solid #444;
-  background-color: #191c23; /* для полей ввода */
+  border: 1px solid #333; /* граница поля */
+  background-color: #2c3038; /* темный фон для полей */
   color: #fff;
   font-size: 16px;
   width: 100%;
+  transition: border-color 0.3s ease; /* плавный эффект при фокусе */
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #4fc3f7; /* выделение поля голубой рамкой */
 }
 
 .contact-form textarea {
@@ -523,55 +530,50 @@ header.navbar {
 }
 
 .contact-form button {
-  background-color: #4fc3f7; /* основной акцентный цвет */
-  color: #000;
-  padding: 12px 24px;
+  background-color: #4fc3f7; /* голубая кнопка */
+  color: #0d0f12; /* темный текст на кнопке */
+  padding: 14px 24px;
   border-radius: 10px;
   font-weight: bold;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-  background-color: #3e98d5; /* при наведении */
+  background-color: #3e98d5; /* плавный переход на более темный цвет */
 }
+
+.contact-form button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #4fc3f7; /* эффект свечения при фокусе */
+}
+
 
 /* ==== Кейсы ==== */
 .cases-section {
-  padding: 100px 20px;
-  background-color: #0d0f12;
+  padding: 100px 20px 60px;
+  background-color: #0f1117;
 }
 
-.container cases-section {
+.cases-content {
   max-width: 1280px;
   margin: 0 auto;
-}
-
-.cases-slider {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 200%; /* 2 слайда по 100% */
-}
-
-.slide {
-  flex: 0 0 100%;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  box-sizing: border-box;
   padding: 0 20px;
+}
+
+.cases-section h2 {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cases-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .case-card {
@@ -582,11 +584,13 @@ header.navbar {
   color: #fff;
   text-align: center;
   width: 100%;
-  max-width: 360px;
+  max-width: 290px;
   box-sizing: border-box;
+  flex: 1 1 calc(25% - 30px); /* 4 в ряд */
 }
 
 .case-card h3 {
+
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -619,34 +623,9 @@ header.navbar {
   text-decoration: none;
 }
 
-/* ==== Стрелки ==== */
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 32px;
-  background: rgba(79, 195, 247, 0.1);
+.highlight {
   color: #4fc3f7;
-  border: none;
-  padding: 10px 14px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: background 0.3s ease;
-  z-index: 1;
 }
-
-.slider-arrow:hover {
-  background: rgba(79, 195, 247, 0.3);
-}
-
-.slider-arrow.left {
-  left: 10px;
-}
-
-.slider-arrow.right {
-  right: 10px;
-}
-
 
 
 /* ==== Отзывы ==== */
